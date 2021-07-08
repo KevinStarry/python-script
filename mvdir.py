@@ -1,4 +1,7 @@
 import os
+import shutil
+
+# /num/withdir/files
 
 path = os.getcwd()
 print('Current path:', path)
@@ -7,6 +10,5 @@ files = list()
 files = os.listdir(path)
 for file in files:
     if os.path.isdir(file):
-        print('it is a dir:',file)
-    else:
-        print('it is a file:',file)
+        for _ in os.path.isdir(file):
+            shutil.move(_,file)
