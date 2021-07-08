@@ -13,4 +13,5 @@ for _ in first_dirs:
         if _ in second_dirs:
             if os.path.isdir(_):
                 third_path = os.path.abspath(_)
+                print(f'third path is:{third_path}\n')
                 shutil.move(third_path,first_path)
