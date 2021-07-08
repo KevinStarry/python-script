@@ -9,4 +9,8 @@ for _ in first_dirs:
     if os.path.isdir(_):
         second_path = os.path.abspath(_)
         print(f'second path is:{second_path}\n')
-        shutil.move(second_path,first_path)
+        second_dirs = os.listdir(second_path)
+        if _ in second_dirs:
+            if os.path.isdir(_):
+                third_path = os.path.abspath(_)
+                shutil.move(third_path,first_path)
