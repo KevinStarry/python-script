@@ -8,6 +8,7 @@ print('Current path:', root_dir)
 first_dirs = os.listdir(root_dir)
 for _ in first_dirs:
     if os.path.isdir(_):
-        second_dirs = os.listdir(dir)
-        for _ in os.path.isdir(second_dirs):
+        second_dirs = os.listdir(_)
+        for _ in os.listdir(second_dirs):
             shutil.move(_,root_dir)
+
